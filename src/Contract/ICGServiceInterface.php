@@ -35,16 +35,18 @@ interface ICGServiceInterface {
      * @param string $op_code
      * @param integer $past_minutes
      * @param string $cache_key
+     * @param string $vendor_code
      * @return mixed
      */
-    function betLogGrabber(string $op_code, int $past_minutes, string $cache_key);
+    function betLogGrabber(string $op_code, int $past_minutes, string $cache_key, string $vendor_code);
 
     /**
      * 全營商 抓取遊戲紀錄
      *
      * @param integer $past_minutes
+     * @param string $vendor_code
      * @return mixed
      */
-    function betLogGrabberAll(int $past_minutes);
+    function betLogGrabberAll(int $past_minutes, string $vendor_code);
 }
 
